@@ -1,6 +1,6 @@
 class MotionsController < ApplicationController
   before_action :set_motion, only: [:show, :edit, :update, :destroy]
-
+  skip_before_filter  :verify_authenticity_token
   # GET /motions
   # GET /motions.json
   def index
