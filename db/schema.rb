@@ -13,13 +13,12 @@
 
 ActiveRecord::Schema.define(version: 20160327095802) do
 
-  # These are extensions that must be enabled in order to support this database
-  enable_extension "plpgsql"
-
   create_table "motions", force: :cascade do |t|
-    t.float    "threshold"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.float    "x_axis",     limit: 24
+    t.float    "y_axis",     limit: 24
+    t.float    "z_axis",     limit: 24
+    t.datetime "created_at",            null: false
+    t.datetime "updated_at",            null: false
   end
 
 end

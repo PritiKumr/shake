@@ -21,6 +21,16 @@ class MotionsController < ApplicationController
   def edit
   end
 
+  def get_next
+    @motions = Motion.all
+    if (params[:i_val].to_i < @motions.count)
+      a = @motions[params[:i_val].to_i]
+    else
+      a = @motions.last
+    end
+    render :json => a
+  end
+
   # POST /motions
   # POST /motions.json
   def create
