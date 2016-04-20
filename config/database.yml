@@ -35,12 +35,10 @@ test:
   encoding: utf8
 
 production:
-  adapter: mysql2
+  adapter: postgresql
+  encoding: unicode
   database: shake
-  username: root
+  username: preethi
   password: root
-  socket: /var/run/mysqld/mysqld.sock
   host: localhost
-  pool: 25
-  timeout: 50000000
-  encoding: utf8
+  port: 5432
