@@ -24,11 +24,11 @@ class MotionsController < ApplicationController
   def get_next
     @motions = Motion.all
     if (params[:i_val].to_i < @motions.count)
-      a = @motions[params[:i_val].to_i]
+      ab = @motions[params[:i_val].to_i]
     else
-      a = @motions.last
+      ab = @motions.last
     end
-    render :json => a
+    render :json => {:x => ab.x_axis, :y => ab.y_axis, :z => ab.z_axis, :i => @motions.last.id }
   end
 
   # POST /motions

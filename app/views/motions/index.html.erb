@@ -73,9 +73,10 @@ $(function () {
                                   i_val: i
                                 },
                                 success: function(data) {
-                                  x_val = data.x_axis;
-                                  y_val = data.y_axis;
-                                  z_val = data.z_axis;
+                                  x_val = data.x;
+                                  y_val = data.y;
+                                  z_val = data.z;
+                                  i = data.i;
                                 }
                               });
                             var a = (new Date()).getTime(), // current time
