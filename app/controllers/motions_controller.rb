@@ -22,7 +22,7 @@ class MotionsController < ApplicationController
   end
 
   def get_next
-    @motions = Motion.all
+    @motions = Motion.where(:id => params[:i_val]..params[:ino])
     if (params[:i_val].to_i < @motions.count)
       ab = @motions[params[:i_val].to_i]
     else

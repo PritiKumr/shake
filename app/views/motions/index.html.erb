@@ -64,19 +64,21 @@ $(function () {
                         var y_val = 0;
                         var z_val = 0;
                         var i = 2;
+                        var ino =3;
                         setInterval(function() {
                           $.ajax({
                                 type: 'get',
                                 dataType: 'json',
                                 url: "/get_next",
                                 data: {
-                                  i_val: i
+                                  i_val: i,
+                                  ino: ino
                                 },
                                 success: function(data) {
                                   x_val = data.x;
                                   y_val = data.y;
                                   z_val = data.z;
-                                  i = data.i;
+                                  ino = data.i;
                                 }
                               });
                             var a = (new Date()).getTime(), // current time
@@ -87,7 +89,7 @@ $(function () {
                             series2.addPoint([a, y], false, true);
                             series3.addPoint([a, z], true, true);
                             i++;
-                        }, 500);
+                        }, 50);
                     }
                 }
             },
