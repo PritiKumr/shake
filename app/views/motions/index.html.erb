@@ -11,27 +11,7 @@
   </head>
   <body>
 <div id="container" style="min-width: 310px; height: 400px; margin: 0 auto"></div>
-<table>
-  <thead>
-    <tr>
-      <th>Co Ordinates</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
 
-  <tbody>
-    <% @motions.each do |motion| %>
-      <tr>
-        <td><%= motion.x_axis %></td>
-        <td><%= motion.y_axis %></td>
-        <td><%= motion.z_axis %></td>
-        <td><%= link_to 'Show', motion %></td>
-        <td><%= link_to 'Edit', edit_motion_path(motion) %></td>
-        <td><%= link_to 'Destroy', motion, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
 
 <br>
 
