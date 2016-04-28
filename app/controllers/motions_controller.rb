@@ -79,6 +79,6 @@ class MotionsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def motion_params
-      params.require(:motion).permit(:threshold)
+      params.require(:motion).permit(:x_axis, :y_axis, :z_axis)
     end
 end
