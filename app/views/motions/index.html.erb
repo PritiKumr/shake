@@ -43,22 +43,20 @@ $(function () {
                         var x_val = 0;
                         var y_val = 0;
                         var z_val = 0;
+                        var i_val = 0;
                         var i = 2;
-                        var ino =3;
                         setInterval(function() {
                           $.ajax({
                                 type: 'get',
                                 dataType: 'json',
                                 url: "/get_next",
                                 data: {
-                                  i_val: i,
-                                  ino: ino
+                                  i_val: i
                                 },
                                 success: function(data) {
                                   x_val = data.x;
                                   y_val = data.y;
                                   z_val = data.z;
-                                  ino = data.i;
                                 }
                               });
                             var a = (new Date()).getTime(), // current time
